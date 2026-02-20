@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class Exercicio2 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int[] vetor = new int[4];
+        int somaPares = 0;
+        int lidos = 0;
+
+        while (lidos < 4) {
+            System.out.print("digite um numero inteiro: ");
+            
+            try {
+                vetor[lidos] = scanner.nextInt();
+                
+                if (vetor[lidos] % 2 == 0) {
+                    somaPares = somaPares + vetor[lidos];
+                }
+                
+                lidos++;
+            } catch (Exception e) {
+                System.out.println("erro valor invalido escreva um valor inteiro.");
+                scanner.next();
+            }
+        }
+        
+        System.out.println(somaPares);
+        
+        scanner.close();
+    }
+}
