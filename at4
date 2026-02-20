@@ -1,0 +1,34 @@
+import java.util.Scanner;
+
+public class Exercicio1 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int[][] matriz = new int[3][3];
+
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                while (true) {
+                    System.out.print("Digite um valor inteiro: ");
+                    try {
+                        matriz[i][j] = sc.nextInt();
+                        break;
+                    } catch (Exception e) {
+                        System.out.println("Inválido. Apenas números inteiros.");
+                        sc.next();
+                    }
+                }
+            }
+        }
+
+        System.out.println();
+        System.out.println("Matriz:");
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                System.out.print(matriz[i][j] + " ");
+            }
+            System.out.println();
+        }
+        
+        sc.close();
+    }
+}
