@@ -1,0 +1,19 @@
+
+public class Main {
+    public static void main(String[] args) {
+        Aluno[] listaDeAlunos = new Aluno[5];
+
+        listaDeAlunos[0] = new Aluno("Ana Silva", 20, "2023001");
+        listaDeAlunos[1] = new Aluno("Bruno Costa", 22, "2023002");
+        listaDeAlunos[2] = new Aluno("Carlos Mendes", 19, "2023003");
+        listaDeAlunos[3] = new Aluno("Diana Rocha", 21, "2023004");
+        listaDeAlunos[4] = new Aluno("Eduardo Lima", 23, "2023005");
+
+        System.out.println("Lista de Alunos Cadastrados:");
+        for (int i = 0; i < listaDeAlunos.length; i++) {
+            System.out.println("Nome: " + listaDeAlunos[i].getName() + 
+                               " | Idade: " + listaDeAlunos[i].getAge() + 
+                               " | Matrícula: " + listaDeAlunos[i].getRegistration());
+        }
+    }
+}
